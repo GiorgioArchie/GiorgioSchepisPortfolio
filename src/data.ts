@@ -56,6 +56,7 @@ export const portfolio = {
       description: 'I also build custom websites for people selling homes. Casa Jade is a live example: a property-focused site with a photo gallery, home layout, amenities, neighborhood details, rental history, and buyer inquiry links.',
       stack: ['Property marketing', 'Photo gallery', 'Responsive web'],
       href: 'https://giorgioarchie.github.io/Tulum-House/',
+      image: 'https://giorgioarchie.github.io/Tulum-House/photos/living-room-wide.jpg',
       label: 'View live website',
     },
   ],

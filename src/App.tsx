@@ -65,7 +65,6 @@ function App() {
               <p>{portfolio.about}</p>
               <a className="text-link" href={portfolio.links.linkedin} target="_blank" rel="noreferrer">More about me on LinkedIn <Arrow diagonal /></a>
             </div>
-            <div className="principle-card"><span className="principle-mark">“</span><p>Stay curious.<br />Make it useful.<br /><em>Make it better.</em></p><span className="principle-caption">A working philosophy</span></div>
           </div>
         </section>
 
@@ -87,6 +86,8 @@ function App() {
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
                     />
+                  ) : project.image ? (
+                    <img className="project-art-image" src={project.image} alt={`${project.name} preview`} loading="lazy" />
                   ) : (
                     <div className="project-art-placeholder" aria-hidden="true">
                       <span className="art-stamp">{project.number} / FIELD NOTES</span>
