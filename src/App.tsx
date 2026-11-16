@@ -128,7 +128,6 @@ function App() {
         <section className="experience-section section-wrap" id="experience">
           <div className="section-heading experience-heading">
             <div><p className="eyebrow">04 / EXPERIENCE & EDUCATION</p><h2>Learning by <em>doing.</em></h2></div>
-            <p className="heading-aside">Every step is part<br />of the story.</p>
           </div>
           <div className="timeline">
             {portfolio.experience.map((item) => <article className="timeline-item" key={`${item.role}-${item.organization}`}><div className="timeline-period">{item.period}</div><div className="timeline-detail"><span className="timeline-dot" /><h3>{item.role}</h3><p className="organization">{item.organization}</p><p>{item.detail}</p></div></article>)}
