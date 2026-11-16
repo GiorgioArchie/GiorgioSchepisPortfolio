@@ -36,7 +36,7 @@ export const portfolio = {
       description: 'Built a self-improving model trained on successful traders’ strategies. It reads live Unusual Whales and TradingView data to predict entries, buy/sell signals, and stop-loss levels, then logs predictions against outcomes for a supervised feedback loop.',
       stack: ['Machine learning', 'Live data', 'Feedback loop'],
       href: 'https://drive.google.com/file/d/1DaRh3hR0jodnN1-Ldhb2hbb1aMYue_YW/view?usp=sharing',
-      videoId: 'FCM8oebO2KM',
+      videoId: 'bEkmiPdovuM',
       label: 'Watch demo',
     },
     {
@@ -46,7 +46,7 @@ export const portfolio = {
       description: 'Connected warranty and customer data to SAP through digital forms and software integrations, laying the groundwork for current and future AI-assisted customer service tools.',
       stack: ['SAP', 'Digital forms', 'AI workflows'],
       href: 'https://drive.google.com/file/d/1MsbY93ifP_5yi4HgW1EEZ25m1gPJACTR/view?usp=sharing',
-      videoId: 'bEkmiPdovuM',
+      videoId: 'FCM8oebO2KM',
       label: 'Watch demo',
     },
     {
