@@ -2,7 +2,7 @@ export const portfolio = {
   name: 'Giorgio Schepis',
   role: 'Computer Science Student · AI/ML & Software Engineering',
   location: 'Boulder, Colorado',
-  email: 'giorgioschepis14@gmail.com',
+  email: 'giorgioschepis11@gmail.com',
   phone: '+1-305-798-3007',
   intro: 'I’m a computer science student at the University of Colorado Boulder focused on applied AI/ML and software engineering. At Pure Fishing, I earned top-intern recognition twice while helping deliver AI solutions across creative and customer-service workflows.',
   about: 'I like making complex workflows more useful. At Pure Fishing, I worked across RAG-powered storyboard generation, AI form recognition, and SAP integrations—learning enterprise tools quickly, collaborating across teams, and presenting solutions to 300+ colleagues. Outside engineering, I supervise guest services and co-founded a nonprofit for charitable live events.',
