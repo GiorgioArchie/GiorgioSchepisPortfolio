@@ -40,7 +40,7 @@ function App() {
           </div>
           <div className="portrait-wrap">
             <div className="portrait-frame">
-              <img src="/Giorgio%20Schepis%20HeadShot.jpeg" alt="Portrait of Giorgio Schepis" />
+              <img src="/Giorgio-Schepis-HeadShot.jpeg" alt="Portrait of Giorgio Schepis" />
               <span className="portrait-corner portrait-corner-top" aria-hidden="true">GS / 01</span>
               <span className="portrait-corner portrait-corner-bottom" aria-hidden="true">COMPUTER SCIENCE</span>
             </div>

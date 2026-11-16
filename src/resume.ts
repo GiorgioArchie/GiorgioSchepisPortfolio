@@ -148,15 +148,13 @@ export async function createResumePdf() {
   return pdf
 }
 
-export async function downloadResume() {
-  const pdf = await createResumePdf()
-  const blob = pdf.output('blob')
-  const url = URL.createObjectURL(blob)
+export function downloadResume() {
+  const url = `${import.meta.env.BASE_URL}Giorgio-Schepis-Resume.pdf`
   const link = document.createElement('a')
   link.href = url
   link.download = 'Giorgio-Schepis-Resume.pdf'
+  link.rel = 'noopener'
   document.body.appendChild(link)
   link.click()
   link.remove()
-  window.setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
