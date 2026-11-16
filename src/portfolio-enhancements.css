@@ -1,0 +1,171 @@
+/* A bold editorial layer inspired by the references' image-led, modular portfolios. */
+:root {
+  --violet: #10303a;
+  --coral: #2095a3;
+  --accent: #4bd9e5;
+}
+
+.hero {
+  background-image:
+    linear-gradient(rgba(95,210,220,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95,210,220,.045) 1px, transparent 1px),
+    radial-gradient(ellipse at 82% 25%, rgba(47,183,199,.24), transparent 38%);
+  background-size: 42px 42px, 42px 42px, auto;
+  background-position: center;
+}
+
+.hero-copy {
+  animation: hero-rise .8s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.portrait-wrap {
+  isolation: isolate;
+  perspective: 900px;
+  animation: portrait-arrive .9s .12s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.portrait-frame {
+  border: 8px solid #12282e;
+  border-radius: 3px;
+  box-shadow: 19px 22px 0 rgba(35,194,207,.12), 0 25px 60px rgba(0,0,0,.4);
+  transform: rotate(2.5deg);
+  transition: transform .6s cubic-bezier(.2,.8,.2,1), box-shadow .6s;
+}
+
+.portrait-wrap:hover .portrait-frame {
+  transform: rotate(0) translateY(-5px);
+  box-shadow: 13px 15px 0 rgba(35,194,207,.16), 0 32px 65px rgba(0,0,0,.48);
+}
+
+.portrait-frame img {
+  animation: photo-breathe 12s ease-in-out infinite alternate;
+}
+
+.portrait-corner {
+  position: absolute;
+  z-index: 1;
+  color: #bceff2;
+  font: 8px var(--mono);
+  letter-spacing: .12em;
+  background: #102127;
+  padding: 7px 9px;
+}
+
+.portrait-corner-top { top: 10px; left: 10px; }
+.portrait-corner-bottom { right: 10px; bottom: 10px; }
+
+.float-chip {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 13px;
+  border: 1px solid rgba(75,217,229,.36);
+  background: rgba(13,28,33,.96);
+  color: #dff7f8;
+  box-shadow: 0 9px 24px rgba(0,0,0,.32);
+  font: 8px var(--mono);
+  letter-spacing: .07em;
+  white-space: nowrap;
+}
+
+.float-chip-top {
+  top: 35px;
+  right: -34px;
+  animation: chip-float 5s ease-in-out infinite;
+}
+
+.float-chip-bottom {
+  bottom: 60px;
+  right: -26px;
+  animation: chip-float 5.8s .8s ease-in-out infinite;
+}
+
+.chip-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4bd9e5;
+  box-shadow: 0 0 0 4px rgba(75,217,229,.16);
+}
+
+.chip-bracket { color: var(--violet); font-weight: 500; }
+
+.portrait-orbit {
+  position: absolute;
+  z-index: -1;
+  width: 112%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(75,217,229,.32);
+  border-radius: 50%;
+  top: -8%;
+  left: -10%;
+  animation: orbit-turn 26s linear infinite;
+}
+
+.portrait-orbit::before,
+.portrait-orbit::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.portrait-orbit::before {
+  width: 9px;
+  height: 9px;
+  background: var(--accent);
+  top: 12%;
+  left: 15%;
+  box-shadow: 0 0 0 6px rgba(75,217,229,.16);
+}
+
+.portrait-orbit::after {
+  width: 14px;
+  height: 14px;
+  background: var(--coral);
+  right: 9%;
+  bottom: 20%;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 4px;
+}
+
+.project-card:nth-child(odd) .project-art { background-image: linear-gradient(135deg, #10343d 0%, #187d89 100%); }
+.project-card:nth-child(even) .project-art { background-image: linear-gradient(135deg, #10424b 0%, #31b6c1 100%); }
+.project-art { border-radius: 2px; }
+.project-card:nth-child(3n) .project-art { background-image: linear-gradient(135deg, #0d3b44 0%, #1b8996 100%); }
+
+.ticker { box-shadow: 0 8px 26px rgba(0,0,0,.28); }
+
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes portrait-arrive {
+  from { opacity: 0; transform: translate3d(20px,12px,0) rotate(2deg); }
+  to { opacity: 1; transform: translate3d(0,0,0) rotate(0); }
+}
+
+@keyframes chip-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -7px; }
+}
+
+@keyframes orbit-turn { to { transform: rotate(360deg); } }
+
+@media (max-width: 720px) {
+  .portrait-wrap { margin-right: 22px; }
+  .float-chip-top { right: -26px; top: 25px; }
+  .float-chip-bottom { right: -22px; bottom: 55px; }
+  .portrait-orbit { width: 122%; left: -12%; }
+  .portrait-frame { border-width: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy, .portrait-wrap, .portrait-frame img, .float-chip, .portrait-orbit { animation: none !important; }
+  .portrait-frame { transition: none; }
+}
